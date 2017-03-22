@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- CSS Reset -->
+<link rel="stylesheet" type="text/css" src="assets/reset.css">
+<!-- Bootstrap File -->
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- CSS Style Sheet -->
+<link rel="stylesheet" type="text/css" src="assets/style.css">
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- JavaScript File -->
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<title>Crystals Collector!</title>
+</head>
+
+<header>
+	<!-- Header -->
+	<div class="row">
+		<div class="col-md-4">
+			<h1> Crystals Collector! </h1>
+		</div>
+	</div>
+</header>
+<body>
+	<!-- Game Instructions -->
+	<div class="row">
+		<div class="col-md-6">
+			<p class="bg-primary"> You will be given a random number at the start of the game. 
+			<br><br>
+			 There are four crystals below.
+			 <br><br>
+			 You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+			 <br><br>
+			 The value of each crystal is hidden from you until you click on it.
+			 <br><br>
+			 Each time when game starts, the value of the crystals will chage. 
+			 <br><br><br>
+			 <br><br><br>
+			 </p>
+			 
+		</div>
+	</div>
+	<!-- Generate number text and icon -->
+	<div class="row">
+		<div class="col-md-6">
+			<h1>Click the button to generate a number!</h1>
+		</div>
+		<div class="col-md-6">
+			<button id="randomNumberButton" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-question-sign"></span></h1></button>
+		</div>
+	</div>
+	<!-- This is where the random target number goes -->
+	<div class="row">
+		<div class="col-md-4 randomNumberSection">
+			<h2 id="randomNumberSection">The target number is: </h2>
+		</div>
+	<!-- Win/Loss Tracker -->
+		<div id="scoreCounter" class="col-md-4">
+			<h3 id="announcement"></h3>
+			<h3 id="winTracker"> Wins: </h3>
+			<h3 id="lossTracker"> Losses: </h3>
+		</div>
+	</div>
+	<!-- Gem Pictures -->
+	<div class="row">
+		<div class="col-md-2">
+			<button class="gems diamond" value="0"><img class="img-responsive img-rounded" src="assets/images/Diamond.png"></button>
+		</div>
+		<div class="col-md-2">
+			<button class="gems emerald" value="0"><img class="img-responsive img-rounded" src="assets/images/Emerald.png"></button>
+		</div>
+		<div class="col-md-2">
+			<button class="gems ruby" value="0"><img class="img-responsive img-rounded" src="assets/images/Ruby.png"></button>
+		</div>
+		<div class="col-md-2">
+			<button class="gems topaz" value="0"><img class="img-responsive img-rounded" src="assets/images/Topaz.png"></button>
+		</div>
+	</div>
+	<!-- Score -->
+	<div class="row">
+		<div class="col-md-4">
+			<h3> Your total score is: </h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<h3 class="playerScore"></h3>
+		</div>
+	</div>
+
+
+</body>
+</html>
