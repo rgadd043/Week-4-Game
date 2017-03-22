@@ -18,7 +18,7 @@ $(document).ready(function() {
 		return gemNumber;
 	}
 
-	$(".diamond").attr("value", randomGemNumber());
+	  $(".diamond").attr("value", randomGemNumber());
     $(".emerald").attr("value", randomGemNumber());
     $(".ruby").attr("value", randomGemNumber());
     $(".topaz").attr("value", randomGemNumber());
@@ -26,23 +26,29 @@ $(document).ready(function() {
     $(".gems").on("click", function() {
     	playerTotal = playerTotal + parseInt($(this).attr("value"));
     	$(".playerScore").html(playerTotal);
-     	checkStatusOfGame();
+      gameReset();
     });
 
-    // Make a function run whenever something is clicked.  Make sure to put this function inside the document.ready().
-     function checkStatusOfGame() {
-          console.log(playerTotal);
-          if (playerTotal === randomTargetNumber) {
-          	$("#announcement").html(" You've won!");
-          	alert("You've won! Refresh the browser to play again.")
-            }
-          else if (playerTotal > randomTargetNumber){
-          	$("#announcement").html("You've lost.");
-          	alert("You've lost. Please refresh the browser to play again.");
-          }
-        };
-
-
+      function gameReset(){
+        if (playerTotal === randomTargetNumber){
+          wins++;
+          playerTotal = 0;
+          $(".playerScore").html("Generate new number, then click a gem.");
+          randomTargetNumber = 0;
+          $("#randomNumberSection").html("The target number is: " + randomTargetNumber);
+          $("#winCount").html("Wins: " +wins)
+          alert("You've won. Click to generate a new number.");
+        }
+        else if (playerTotal > randomTargetNumber) {
+          losses++;
+          playerTotal = 0;
+          $(".playerScore").html("Generate new number, then click a gem.");
+          randomTargetNumber = 0;
+          $("#randomNumberSection").html("The target number is: " + randomTargetNumber);
+          $("#lossCount").html("Losses: " +losses)
+          alert("You've lost. Click to generate a new number.");
+        }
+      }
             
   
 });
