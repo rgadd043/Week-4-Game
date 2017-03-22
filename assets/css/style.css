@@ -1,0 +1,63 @@
+/* Available Fonts
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Inconsolata', monospace;*/
+
+* {
+	box-sizing: border-box;
+}
+h1 {
+	font-size: 48px;
+	font-weight: 800;
+}
+p {
+	font-size: 18px;
+}
+body {
+	font-family: 'Inconsolata','Source Sans Pro','Roboto','Helvetica Neue', sans-serif;
+	font-weight: 600;
+	background: url('../images/background.jpg');
+}
+.headTitle {
+	text-align: center;
+	padding: 10px;
+	margin-left: 10px;
+}
+.bg-primary {
+	padding: 10px;
+	margin-left: 10px;
+}
+.generateNumberText, .scoreText, .playerScore {
+	margin-left: 20px;
+}
+.generateNumberText {
+	font-size: 36px;
+}
+#randomNumberSection {
+	font-size: 36px;
+}
+.randomNumberSection {
+	width: 525px;
+}
+.img-responsive {
+	height: 200px;
+	width: 225px;
+}
+.playerScoreDiv {
+	height: 150px;
+	background-color: #428bca;
+}
+.playerScore {
+	text-align: center;
+	font-weight: 700;
+	font-size: 36px;
+	color: white;
+	margin-top: 50px;
+}
+#announcement {
+	font-size: 36px;
+	text-align: center;
+}
+.gems {
+	margin-left: 10px;
+}
